@@ -7,6 +7,7 @@ import com.netflix.zuul.exception.ZuulException;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.ResponseResult;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,13 +33,16 @@ public class LoginFilterTest extends ZuulFilter {
          error：处理请求时发生错误调用
 
          */
-        return "pre";
+        //return "pre";
+        return FilterConstants.PRE_TYPE;
     }
 
     //过虑器序号，越小越被优先执行
     @Override
     public int filterOrder() {
-        return 0;
+
+        //return 0;
+        return  FilterConstants.PRE_DECORATION_FILTER_ORDER-1;
     }
 
     @Override
