@@ -17,6 +17,12 @@ spring:
     cache: false  #关闭模板缓存，方便测试
     settings:
       template_update_delay: 0
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: xc-govern-config
+      profile: dev
 eureka:
   client:
     registerWithEureka: true #服务注册开关

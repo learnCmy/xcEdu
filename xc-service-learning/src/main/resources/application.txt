@@ -1,8 +1,6 @@
 server:
   port: ${PORT:40600}
 spring:
-  application:
-    name: xc-service-learning
   datasource:
     druid:
       url: ${MYSQL_URL:jdbc:mysql://localhost:3306/xc_learning?characterEncoding=utf-8}

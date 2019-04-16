@@ -9,6 +9,10 @@ spring:
           username: learnCmy
           password: cmy411488986
           basedir: F:\xczxEdu\xcEduService
+    bus:
+      enabled: true
+      trace:
+        enabled: true
 eureka:
   client:
     registerWithEureka: true #服务注册开关
@@ -21,4 +25,9 @@ eureka:
     instance-id: ${spring.application.name}:${server.port} #指定实例id
 
 server:
-  port: ${PORT:50000}
+  port: ${PORT:8888}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
