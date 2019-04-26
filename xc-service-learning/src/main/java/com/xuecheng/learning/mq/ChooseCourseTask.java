@@ -17,7 +17,7 @@ import java.util.Map;
  * @version 1.0
  **/
 @Component
-public class ChooseCourseTask {
+public class  ChooseCourseTask {
 
     @Autowired
     LearningService learningService;
